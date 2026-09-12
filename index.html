@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Wishlyo ✨</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe6f2, #e8e4ff);
+      color: #29243d;
+      overflow-x: hidden;
+    }
+
+    nav {
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      font-size: 20px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .box {
+      max-width: 650px;
+    }
+
+    .emoji {
+      font-size: 65px;
+      animation: float 2s infinite ease-in-out;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      border: none;
+      padding: 16px 30px;
+      border-radius: 30px;
+      font-size: 17px;
+      font-weight: bold;
+      background: #29243d;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    .cards {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cards h2 {
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.7);
+      padding: 25px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card div {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">WISHLYO <span>✨</span></div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="box">
+      <div class="emoji">🎁</div>
+
+      <h1>Make Someone Smile Today 💖</h1>
+
+      <p>
+        Create a beautiful surprise and send it with just one link.
+      </p>
+
+      <button class="btn" onclick="showSurprises()">
+        Create a Surprise 🎉
+      </button>
+    </div>
+  </section>
+
+  <section class="cards" id="surprises">
+    <h2>Choose your surprise ✨</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div>🎂</div>
+        Birthday
+      </div>
+
+      <div class="card">
+        <div>🎓</div>
+        Congratulations
+      </div>
+
+      <div class="card">
+        <div>💐</div>
+        Thank You
+      </div>
+
+      <div class="card">
+        <div>🎉</div>
+        Celebration
+      </div>
+
+      <div class="card">
+        <div>🤝</div>
+        Friendship
+      </div>
+
+      <div class="card">
+        <div>✨</div>
+        Just Because
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function showSurprises() {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("surprises").style.display = "block";
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
